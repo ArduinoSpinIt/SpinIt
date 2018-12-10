@@ -66,13 +66,13 @@ public class NewBehaviourScript : MonoBehaviour {
 
         // Use this for initialization
     void Start () {
-        CloudConnection my = new CloudConnection();
-        //my.AddScore("nana", 2, "banan");
+        CloudConnection connection = new CloudConnection();
+        
         string temp1 = "3333";
         string temp2 = "22222";
         int temp3 = 5;
-        //StartCoroutine(PostRequest((addScore), (json), (text) =>
-        StartCoroutine(my.AddScore((temp1),(temp3),(temp2),(text) =>
+     
+        StartCoroutine(connection.AddScore((temp1),(temp3),(temp2),(text) =>
         {
             if (text != "Error")
             {
@@ -84,10 +84,26 @@ public class NewBehaviourScript : MonoBehaviour {
             }
         }
             ));
-        
- 
 
-   }
+        StartCoroutine(connection.GetScoresPerUser((temp1), (text) =>
+        {
+            if (text != "Error")
+            {
+                CloudConnection.JsonRow[] array = connection.GetRowsFromJson(text);
+                string it = "";
+                it = it + array[0].Score;
+                Debug.Log("the second answer is:" + it);
+            }
+            else
+            {
+                Debug.Log("there was an error");
+            }
+        }
+        ));
+
+
+
+    }
 
 
     // Update is called once per frame
