@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -9,14 +8,17 @@ public class CloudConnection : object {
 
     private static string addScore = "https://uploadscore.azurewebsites.net/api/HttpTrigger1?code=I7utRaf2lYP2UHWJSXMCsjhC9MOsAXBxjuhoI1VNTNHOYmuw2LiiGg==";
     private static string getScoresPerUser = "";
-    private static string getAllRecentScores = "";
+    private static string getAllBestScores = "";
+    private static string getAllScores = "";
 
     public IEnumerator AddScore(string name, int score, string time, System.Action<string> callback)
     {
         // Debug.Log(name + " " + score + " " +time);
         string json = "{\"name\": \""+name+"\",\"score\":"+score+", \"time\":\""+time+"\" }";
+        //var data = PostRequest(addScore, json, callback);
+        //Debug.Log(data);
+        //yield return GetReturnValueFromRequest(data.ToString());
         yield return PostRequest(addScore, json, callback);
-
     }
 
     private IEnumerator PostRequest(string url, string json, System.Action<string> callback)
@@ -36,8 +38,24 @@ public class CloudConnection : object {
         }
         else
         {
-            callback(uwr.downloadHandler.text);
+            callback(GetReturnValueFromRequest(uwr.downloadHandler.text));
         }
+    }
+
+    class JsonItem //{"m_MaxCapacity":long,"Capacity":int,"m_StringValue":string,"m_currentThread":int}
+    {
+
+        public long m_MaxCapacity;
+        public int Capacity;
+        public string m_StringValue;
+        public int m_currentThread;
+    }
+
+
+    private string GetReturnValueFromRequest(string json)
+    {
+        var resultJson = JsonUtility.FromJson<JsonItem>(json).m_StringValue;
+        return resultJson;
     }
 
 
