@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-
+using System.Collections.Generic;
 
 //put it anywhere - helper connection class 
 public class CloudConnection : object {
@@ -59,9 +59,9 @@ public class CloudConnection : object {
         public string m_StringValue;
         public int m_currentThread;
     }
-    public class JsonRowArray
+    public class JsonRowList
     {
-        public JsonRow[] rowArray;
+        public List<JsonRow> rowList;
     }
 
     public class JsonRow
@@ -72,13 +72,14 @@ public class CloudConnection : object {
     }
 
 
-    public JsonRow[] GetRowsFromJson(string json)
+    public List<JsonRow> GetRowsFromJson(string json)
     {
-        json = "{\"rowArray\":" + json + "}";
-        var resultJson = JsonUtility.FromJson<JsonRowArray>(json);
+        json = "{\"rowList\":" + json + "}";
+        Debug.Log(json);
+        var resultJson = JsonUtility.FromJson<JsonRowList>(json);
         //TODO- check why this returns null
-        Debug.Log(resultJson.rowArray);
-        return resultJson.rowArray;
+        Debug.Log(resultJson.rowList);
+        return resultJson.rowList;
     }
 
 

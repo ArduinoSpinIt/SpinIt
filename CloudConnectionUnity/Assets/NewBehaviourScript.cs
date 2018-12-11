@@ -89,7 +89,7 @@ public class NewBehaviourScript : MonoBehaviour {
         {
             if (text != "Error")
             {
-                CloudConnection.JsonRow[] array = connection.GetRowsFromJson(text);
+                List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
                 it = it + array[0].Score;
                 Debug.Log("the second answer is:" + it);
