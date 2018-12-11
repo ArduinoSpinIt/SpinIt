@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections.Generic;
+using System;
 
 //put it anywhere - helper connection class 
 public class CloudConnection : object {
@@ -59,10 +60,6 @@ public class CloudConnection : object {
         public string m_StringValue;
         public int m_currentThread;
     }
-    public class JsonRowList
-    {
-        public List<JsonRow> rowList;
-    }
 
     public class JsonRow
     {
@@ -71,24 +68,47 @@ public class CloudConnection : object {
         public string Time;
     }
 
+    public List<string> SplitJsonArray(string json)
+    {
+        string no_first = json.Split('[')[1];
+        string no_second = no_first.Split(']')[0];
+        string[] new1 = no_second.Split(new string[] { "},{" }, StringSplitOptions.None);
+        List<string> jsonList = new List<string>();
+        foreach (string item in new1)
+        {
+            string new_item = item;
+            if (item[0] != '{')
+            {
+                new_item = "{" + new_item;
+            }
+            if (new_item[new_item.Length - 1] != '}')
+            {
+                new_item = new_item + "}";
+            }
+            jsonList.Add(new_item);
+        }
+        return jsonList;
+
+    }
 
     public List<JsonRow> GetRowsFromJson(string json)
     {
-        json = "{\"rowList\":" + json + "}";
-        Debug.Log(json);
-        var resultJson = JsonUtility.FromJson<JsonRowList>(json);
-        //TODO- check why this returns null
-        Debug.Log(resultJson.rowList);
-        return resultJson.rowList;
+        List<string> list2 = SplitJsonArray(json);
+        List<JsonRow> list = new List<JsonRow>();
+        foreach (string item in list2)
+        {
+            JsonRow item2 = JsonUtility.FromJson<JsonRow>(item);
+            list.Add(item2);
+        }
+
+        return list;
     }
 
 
 
     private string GetReturnValueFromRequest(string json)
     {
-        Debug.Log("the json is: " +json);
         var resultJson = JsonUtility.FromJson<JsonItem>(json).m_StringValue;
-        Debug.Log("output: " + resultJson);
         return resultJson;
     }
 

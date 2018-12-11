@@ -91,7 +91,7 @@ public class NewBehaviourScript : MonoBehaviour {
             {
                 List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
-                it = it + array[0].Score;
+                it = it + array[0].Score; // example for getting value
                 Debug.Log("the second answer is:" + it);
             }
             else
