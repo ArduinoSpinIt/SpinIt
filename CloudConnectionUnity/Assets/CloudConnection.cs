@@ -9,7 +9,7 @@ public class CloudConnection : object {
 
     private static string addScore = "https://uploadscore.azurewebsites.net/api/HttpTrigger1?code=I7utRaf2lYP2UHWJSXMCsjhC9MOsAXBxjuhoI1VNTNHOYmuw2LiiGg==";
     private static string getScoresPerUser = "https://getscoresperuser.azurewebsites.net/api/HttpTrigger2?code=K1SlyXb/VWQ6XyUjOsFy2/1BjEPlzQDMRccKVTQhNRvLHpAKMlTlhw==";
-    private static string getAllBestScores = "";
+    private static string getAllXBestScores = "https://getbestscores.azurewebsites.net/api/getXbestscores?code=xyTDr1gWxntQRKPrHlHSErwCasKBSvrbhw8fhu/cleca6paCIxC4BQ==";
     private static string getAllScores = "";
 
     public IEnumerator AddScore(string name, int score, string time, System.Action<string> callback)
@@ -40,7 +40,7 @@ public class CloudConnection : object {
     public IEnumerator GetScoresPerUser(string name,System.Action<string> callback)
     {
         string json = "{\"name\": \"" + name+"\"}";
-        yield return MakeRequest(getScoresPerUser, json);
+        //yield return MakeRequest(getScoresPerUser, json);
         UnityWebRequest request = MakeRequest(getScoresPerUser, json);
         yield return request.SendWebRequest();
         if (request.isNetworkError)
@@ -52,6 +52,22 @@ public class CloudConnection : object {
             callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
         }
     }
+
+    public IEnumerator GetBestXScores(int x, System.Action<string> callback)
+    {
+        string json = "{\"amount\": " + x + "}";
+        UnityWebRequest request = MakeRequest(getAllXBestScores, json);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + request.error);
+        }
+        else
+        {
+            callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
+        }
+    }
+
 
     class JsonItem //{"m_MaxCapacity":long,"Capacity":int,"m_StringValue":string,"m_currentThread":int}
     {
