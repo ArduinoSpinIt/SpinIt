@@ -7,10 +7,27 @@ using System;
 //put it anywhere - helper connection class 
 public class CloudConnection : object {
 
-    private static string addScore = "https://uploadscore.azurewebsites.net/api/HttpTrigger1?code=I7utRaf2lYP2UHWJSXMCsjhC9MOsAXBxjuhoI1VNTNHOYmuw2LiiGg==";
-    private static string getScoresPerUser = "https://getscoresperuser.azurewebsites.net/api/HttpTrigger2?code=K1SlyXb/VWQ6XyUjOsFy2/1BjEPlzQDMRccKVTQhNRvLHpAKMlTlhw==";
-    private static string getAllXBestScores = "https://getbestscores.azurewebsites.net/api/getXbestscores?code=xyTDr1gWxntQRKPrHlHSErwCasKBSvrbhw8fhu/cleca6paCIxC4BQ==";
-    private static string getAllScores = "";
+    private static string addScore = "https://handlescoresrequests.azurewebsites.net/api/addScore?code=/NGKRrb1DOzK6MX7ZAbEu3M9UaMCGuuFrDcJ3UTDxKM/3/cdCrOFUg==";
+    private static string getScoresPerUser = "https://handlescoresrequests.azurewebsites.net/api/getScoresPerUser?code=aT5kP04mPlURcCOrtBAG83L5zWbMrKKRWrxv2fGp3eGYe4lCxHGFUA==";
+    private static string getAllXBestScores = "https://handlescoresrequests.azurewebsites.net/api/getAllXBestScores?code=1ylDAja5Eonqyt5dPUGRAczD2D4BoCMavoJavBpwcZCRcCj4W8acPg==";
+    private static string getAllScores = "https://handlescoresrequests.azurewebsites.net/api/getAllScores?code=ya6Fz/7QnLyR8G5KX3PEvwZCx89cwnI9xYfr4fD8aj1FlcHjNgJQGw==";
+    private static string getUserBestXScores = "https://handlescoresrequests.azurewebsites.net/api/getUserBestXScores?code=4GOE7FsVh15z9ArvzLZ22AvtgxS/6QtyANBPkY7QEGJKvwCoEHcGeg==";
+    private static string cleanDB = "https://handlescoresrequests.azurewebsites.net/api/cleanDB?code=MFJmQdZTbGuJjp6jsax5zgcNBTqU9JZu/G/40SB22sGCMGpFpFTc/A==";
+
+    public IEnumerator CleanDB(System.Action<string> callback)
+    {
+        UnityWebRequest request = MakeRequest(cleanDB);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
+        }
+        else
+        {
+            callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
+        }
+    }
 
     public IEnumerator AddScore(string name, int score, string time, System.Action<string> callback)
     {
@@ -20,6 +37,7 @@ public class CloudConnection : object {
         if (request.isNetworkError)
         {
             Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
         }
         else
         {
@@ -27,13 +45,14 @@ public class CloudConnection : object {
         }
     }
 
-    private UnityWebRequest MakeRequest(string url, string json)
+    private UnityWebRequest MakeRequest(string url, string json = "{}")
     {
         var uwr = new UnityWebRequest(url, "POST");
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
         uwr.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
         uwr.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         uwr.SetRequestHeader("Content-Type", "application/json");
+        
         return uwr;
     }
 
@@ -46,10 +65,27 @@ public class CloudConnection : object {
         if (request.isNetworkError)
         {
             Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
         }
         else
         {
             callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
+        }
+    }
+
+
+    public IEnumerator GetAllScores(System.Action<string> callback)
+    {
+        UnityWebRequest request = MakeRequest(getAllScores);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
+        }
+        else
+        {
+            callback(GetReturnValueFromRequest(request.downloadHandler.text)); 
         }
     }
 
@@ -61,6 +97,23 @@ public class CloudConnection : object {
         if (request.isNetworkError)
         {
             Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
+        }
+        else
+        {
+            callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
+        }
+    }
+
+    public IEnumerator GetUserBestXScores(string name,int x, System.Action<string> callback)
+    {
+        string json = "{\"name\": \"" + name + "\",\"amount\": " + x + "}";
+        UnityWebRequest request = MakeRequest(getUserBestXScores, json);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + request.error);
+            callback("ERROR");
         }
         else
         {

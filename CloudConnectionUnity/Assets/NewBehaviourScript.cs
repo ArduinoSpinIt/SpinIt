@@ -9,8 +9,9 @@ public class NewBehaviourScript : MonoBehaviour {
     void Start () {
         CloudConnection connection = new CloudConnection();
         
-        string temp1 = "3333";
-        string temp2 = "22222";
+        string temp1 = "Tal";
+        string temp4 = "Aviv";
+        string temp2 = "24.12 8:00";
         int temp3 = 5;
      //example how to add score
         StartCoroutine(connection.AddScore((temp1),(temp3),(temp2),(text) =>
@@ -60,9 +61,47 @@ public class NewBehaviourScript : MonoBehaviour {
         }
         ));
 
+        //example how to get all scores
+        StartCoroutine(connection.GetAllScores((text) =>
+        {
+            if (text != "Error")
+            {
+                List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
+                string it = "";
+                it = it + array[0].Score; // example for getting value
+                Debug.Log("the FORTH answer is:" + it);
+            }
+            else
+            {
+                Debug.Log("there was an error");
+            }
+        }
+       ));
+
+        int numbertoreturn = 5;
+        StartCoroutine(connection.GetUserBestXScores((temp1),(numbertoreturn),(text) =>
+        {
+            if (text != "Error")
+            {
+                List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
+                string it = "";
+                it = it + array[0].Score; // example for getting value
+                Debug.Log("the FORTH answer is:" + it);
+            }
+            else
+            {
+                Debug.Log("there was an error");
+            }
+        }
+    ));
 
 
     }
+
+
+    
+
+
 
 
     // Update is called once per frame
