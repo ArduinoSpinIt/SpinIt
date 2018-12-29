@@ -12,9 +12,10 @@ public class NewBehaviourScript : MonoBehaviour {
         string temp1 = "Tal";
         string temp4 = "Aviv";
         string temp2 = "24.12 8:00";
-        int temp3 = 5;
+        string temp3 = "1:00";
+        int round = 5;
      //example how to add score
-        StartCoroutine(connection.AddScore((temp1),(temp3),(temp2),(text) =>
+        StartCoroutine(connection.AddScore((temp1),(temp3),(round),(temp2),(text) =>
         {
             if (text != "Error")
             {
@@ -33,7 +34,7 @@ public class NewBehaviourScript : MonoBehaviour {
             {
                 List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
-                it = it + array[0].Score; // example for getting value
+                it = it + array[0].Time; // example for getting value
                 Debug.Log("the second answer is:" + it);
             }
             else
@@ -44,14 +45,15 @@ public class NewBehaviourScript : MonoBehaviour {
         ));
 
         int amount = 2;
+        int rounds = 3;
         //example how TO get x best scores from all users
-        StartCoroutine(connection.GetBestXScores((amount), (text) =>
+        StartCoroutine(connection.GetBestXScores((amount),(rounds), (text) =>
         {
             if (text != "Error")
             {
                 List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
-                it = it + array[0].Score; // example for getting value
+                it = it + array[0].Time; // example for getting value
                 Debug.Log("the THIRD answer is:" + it);
             }
             else
@@ -68,7 +70,7 @@ public class NewBehaviourScript : MonoBehaviour {
             {
                 List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
-                it = it + array[0].Score; // example for getting value
+                it = it + array[0].Time; // example for getting value
                 Debug.Log("the FORTH answer is:" + it);
             }
             else
@@ -85,7 +87,7 @@ public class NewBehaviourScript : MonoBehaviour {
             {
                 List<CloudConnection.JsonRow> array = connection.GetRowsFromJson(text);
                 string it = "";
-                it = it + array[0].Score; // example for getting value
+                it = it + array[0].Time; // example for getting value
                 Debug.Log("the FORTH answer is:" + it);
             }
             else

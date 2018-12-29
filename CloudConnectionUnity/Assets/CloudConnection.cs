@@ -29,9 +29,9 @@ public class CloudConnection : object {
         }
     }
 
-    public IEnumerator AddScore(string name, int score, string time, System.Action<string> callback)
+    public IEnumerator AddScore(string name, string time,int rounds, string date, System.Action<string> callback)
     {
-        string json = "{\"name\": \""+name+"\",\"score\":"+score+", \"time\":\""+time+"\" }";
+        string json = "{\"name\": \""+name+"\",\"time\":\""+time+"\", \"rounds\""+rounds+",\"date\":\""+date+" }";
         UnityWebRequest request = MakeRequest(addScore, json);
         yield return request.SendWebRequest();
         if (request.isNetworkError)
@@ -89,9 +89,9 @@ public class CloudConnection : object {
         }
     }
 
-    public IEnumerator GetBestXScores(int x, System.Action<string> callback)
+    public IEnumerator GetBestXScores(int x,int rounds, System.Action<string> callback)
     {
-        string json = "{\"amount\": " + x + "}";
+        string json = "{\"amount\": " + x +", \"rounds\": "+rounds+ "}";
         UnityWebRequest request = MakeRequest(getAllXBestScores, json);
         yield return request.SendWebRequest();
         if (request.isNetworkError)
@@ -133,8 +133,9 @@ public class CloudConnection : object {
     public class JsonRow
     {
         public string Name;
-        public int Score;
         public string Time;
+        public int Rounds;
+        public string Date;
     }
 
     public List<string> SplitJsonArray(string json)
