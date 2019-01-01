@@ -15,19 +15,20 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     dynamic data = JsonConvert.DeserializeObject(requestBody);
     string bname = data.name;
-    int bscore = data.score;
     string btime = data.time;
+    int brounds = data.rounds;
+    string bdate = data.date;
     //==========================
     //     INPUT CHECK
     if(bname == null){
         return new BadRequestObjectResult("Please supply a name"); // returns 400 response code 
     }
-    if(bscore == null){
-        return new BadRequestObjectResult("Please supply a score"); // returns 400 response code 
-    }
     if(btime == null){
-
         return new BadRequestObjectResult("Please supply a time"); // returns 400 response code 
+    }
+    if(bdate == null){
+
+        return new BadRequestObjectResult("Please supply a date"); // returns 400 response code 
     }
     //=========================
     //   PUT DATA IN DB
@@ -37,7 +38,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     using (SqlConnection conn = new SqlConnection(cnnString) )
     {
         conn.Open();
-        var sqlQuery = "INSERT INTO Scores(Name,Score,Time) VALUES ('"+bname+"',"+bscore+", '"+btime+"');";
+        var sqlQuery = "INSERT INTO Scores(Name,Time,Rounds,Date) VALUES ('"+bname+"','"+btime+"', "+brounds+",'"+bdate+"');";
      
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
         {

@@ -32,7 +32,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     using (SqlConnection conn = new SqlConnection(cnnString) )
     {
         conn.Open();
-        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores WHERE Name='"+bname+"' ORDER BY Score DESC) AS B FOR JSON PATH;";
+        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores WHERE Name='"+bname+"' ORDER BY Time ASC) AS B FOR JSON PATH;";
  
         
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))

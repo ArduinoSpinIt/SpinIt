@@ -15,6 +15,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     dynamic data = JsonConvert.DeserializeObject(requestBody);
     string bname = data.name;
+    int brounds = data.rounds;
 
     //==========================
     //     INPUT CHECK
@@ -31,7 +32,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     {
         conn.Open();
 
-        var sqlQuery = "SELECT Name,Score,Time FROM Scores WHERE Name='"+bname+"' ORDER BY Time FOR JSON PATH;";
+        var sqlQuery = "SELECT Name,Time,Rounds,Date FROM Scores WHERE Name='"+bname+"' AND Rounds="+brounds+" ORDER BY Date FOR JSON PATH;";
 		//"YOUR SQL QUERY.. SELECT, INSERT INTO, DELETE etc.."+
         // " FOR JSON PATH"; // if you want it to return by JSON
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))

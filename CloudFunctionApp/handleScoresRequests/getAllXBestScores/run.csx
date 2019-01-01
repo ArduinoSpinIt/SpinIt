@@ -15,11 +15,17 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     dynamic data = JsonConvert.DeserializeObject(requestBody);
     int amount = data.amount;
+    int rounds = data.rounds;
+
 
     //==========================
     //     INPUT CHECK
     if(amount <= 0){
         return new BadRequestObjectResult("please enter an amount greater then 0"); // returns 400 response code 
+    }
+    if(rounds <= 0){
+                return new BadRequestObjectResult("please enter a round greater then 0"); // returns 400 response code 
+
     }
 
     //=========================
@@ -30,7 +36,8 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     using (SqlConnection conn = new SqlConnection(cnnString) )
     {
         conn.Open();
-        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores ORDER BY Score DESC) AS B FOR JSON PATH;";
+        //TODO - add where rounds =x
+        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores WHERE Rounds="+rounds+" ORDER BY Time ASC) AS B FOR JSON PATH;";
  
         
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))

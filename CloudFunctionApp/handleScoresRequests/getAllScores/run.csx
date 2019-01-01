@@ -19,7 +19,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     using (SqlConnection conn = new SqlConnection(cnnString) )
     {
         conn.Open();
-        var sqlQuery ="SELECT * FROM Scores ORDER BY Time DESC FOR JSON PATH;";
+        var sqlQuery ="SELECT * FROM Scores ORDER BY Time ASC FOR JSON PATH;";
  
         
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
