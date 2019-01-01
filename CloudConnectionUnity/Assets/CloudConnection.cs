@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections.Generic;
 using System;
+using System.Runtime.InteropServices;
 
 //put it anywhere - helper connection class 
 public class CloudConnection : object {
@@ -31,7 +32,7 @@ public class CloudConnection : object {
 
     public IEnumerator AddScore(string name, string time,int rounds, string date, System.Action<string> callback)
     {
-        string json = "{\"name\": \""+name+"\",\"time\":\""+time+"\", \"rounds\""+rounds+",\"date\":\""+date+" }";
+        string json = "{\"name\": \""+name+"\",\"time\":\""+time+"\", \"rounds\":"+rounds+",\"date\":\""+date+"\"}";
         UnityWebRequest request = MakeRequest(addScore, json);
         yield return request.SendWebRequest();
         if (request.isNetworkError)
@@ -40,7 +41,7 @@ public class CloudConnection : object {
             callback("ERROR");
         }
         else
-        {
+        {    
             callback(GetReturnValueFromRequest(request.downloadHandler.text)); //need to return OK if all is good
         }
     }
@@ -56,9 +57,9 @@ public class CloudConnection : object {
         return uwr;
     }
 
-    public IEnumerator GetScoresPerUser(string name,System.Action<string> callback)
+    public IEnumerator GetScoresPerUser(string name,int rounds,System.Action<string> callback)
     {
-        string json = "{\"name\": \"" + name+"\"}";
+        string json = "{\"name\": \"" + name+"\" , \"rounds\":"+rounds+"}";
         //yield return MakeRequest(getScoresPerUser, json);
         UnityWebRequest request = MakeRequest(getScoresPerUser, json);
         yield return request.SendWebRequest();

@@ -14,7 +14,9 @@ public class NewBehaviourScript : MonoBehaviour {
         string temp2 = "24.12 8:00";
         string temp3 = "1:00";
         int round = 5;
+        
      //example how to add score
+        
         StartCoroutine(connection.AddScore((temp1),(temp3),(round),(temp2),(text) =>
         {
             if (text != "Error")
@@ -27,8 +29,9 @@ public class NewBehaviourScript : MonoBehaviour {
             }
         }
             ));
+            
         //example how to get all scores of a user
-        StartCoroutine(connection.GetScoresPerUser((temp1), (text) =>
+        StartCoroutine(connection.GetScoresPerUser((temp1),(round), (text) =>
         {
             if (text != "Error")
             {
@@ -43,7 +46,7 @@ public class NewBehaviourScript : MonoBehaviour {
             }
         }
         ));
-
+    
         int amount = 2;
         int rounds = 3;
         //example how TO get x best scores from all users
@@ -62,7 +65,7 @@ public class NewBehaviourScript : MonoBehaviour {
             }
         }
         ));
-
+    
         //example how to get all scores
         StartCoroutine(connection.GetAllScores((text) =>
         {
@@ -79,7 +82,7 @@ public class NewBehaviourScript : MonoBehaviour {
             }
         }
        ));
-
+    
         int numbertoreturn = 5;
         StartCoroutine(connection.GetUserBestXScores((temp1),(numbertoreturn),(text) =>
         {
@@ -99,10 +102,6 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
     }
-
-
-    
-
 
 
 
