@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Spin_It_App"
+             x:Class="Spin_It_App.MainPage"
+             BackgroundImage="backkk.png">
+
+
+    <ScrollView>
+        
+
+            <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+              
+                <!--<RowDefinition Height="*" />-->
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <RelativeLayout BackgroundColor="{StaticResource lightGray}" HeightRequest="35" >
+                    <Image Aspect="AspectFit" Source="logo_small.png" Margin="10,0,0,00"/>
+                    <Button Margin="105,3,0,00" Style="{StaticResource SmallButton}" Text="change rider"/>
+                </RelativeLayout>
+            
+                <!--  header background  -->
+                <Image Aspect="AspectFit" Source="header2.png" Margin="0,15,0,00"/>
+            </StackLayout>
+            <!--<Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />-->
+
+            <!--  profile image  -->
+            <!--<Image HeightRequest="100" HorizontalOptions="Center" Source="ProfilePic.png" TranslationY="50" VerticalOptions="End" WidthRequest="100" />-->
+
+            <!--  Profile Name  -->
+            <StackLayout Grid.Row="2" Padding="0,0,0,00" HorizontalOptions="Center">
+                <Label Style="{StaticResource ProfileNameLabel}" Text="Dana" Margin="0,13,0,00"/>
+                <!--<Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="Hipster Coffee Drinker" />-->
+            </StackLayout>
+
+            <!--  Social Stats Section  -->
+            <Grid Grid.Row="3" Margin="0,10" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="0.0" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Distance (M)" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="0:00" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Time (min)" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="0" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Speed (KM/H)" />
+                </StackLayout>
+            </Grid>
+
+            <!--  profile description  -->
+            <!--<Label Margin="20,0" Grid.Row="3" Style="{StaticResource MainBodyLabel}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada ultricies arcu nec egestas. Nam porta fermentum aliquam. Nullam tincidunt odio purus." />-->
+
+            <!--  follow button  -->
+           <!-- <Button Grid.Row="4" Margin="20" Style="{StaticResource FollowButton}" Text="Finnished ridding" HorizontalOptions="Center" /> -->
+            <Grid Grid.Row="4" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+               
+                <StackLayout>
+                    <Button Margin="20" Style="{StaticResource FollowButton}" Text="Statistics" />
+                </StackLayout>
+                
+                <StackLayout Grid.Column="1">
+                    <Button Margin="20" Style="{StaticResource CenterButton}" Text="start riding"/>
+                  </StackLayout>
+                
+                <StackLayout Grid.Column="2">
+                    <Button Margin="20" Style="{StaticResource FollowButton}" Text="My Rides" />
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+
+    </ScrollView>
+
+
+</ContentPage>
+
