@@ -37,8 +37,8 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     {
         conn.Open();
         //TODO - add where rounds =x
-        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores WHERE Rounds="+rounds+" ORDER BY Time ASC) AS B FOR JSON PATH;";
- 
+        var sqlQuery ="SELECT TOP "+ amount.ToString() +" * FROM (SELECT TOP 100 PERCENT * FROM Scores WHERE Rounds="+rounds+" ORDER BY Time ASC) AS B ORDER BY Time FOR JSON PATH;";
+       
         
         using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
         {
