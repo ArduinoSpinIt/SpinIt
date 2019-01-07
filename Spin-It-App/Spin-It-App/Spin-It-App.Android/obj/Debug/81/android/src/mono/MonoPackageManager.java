@@ -108,6 +108,12 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "Spin-It-App.Android.dll" comes first in this list. */
 		"Spin-It-App.Android.dll",
 		"FormsViewGroup.dll",
+		"Microcharts.dll",
+		"Microcharts.Droid.dll",
+		"Microcharts.Forms.dll",
+		"SkiaSharp.dll",
+		"SkiaSharp.Views.Android.dll",
+		"SkiaSharp.Views.Forms.dll",
 		"Spin-It-App.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

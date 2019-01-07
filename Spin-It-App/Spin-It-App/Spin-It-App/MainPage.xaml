@@ -80,7 +80,7 @@
                 </StackLayout>
                 
                 <StackLayout Grid.Column="1">
-                    <Button Margin="20" Style="{StaticResource CenterButton}" Text="start riding"/>
+                    <Button Margin="20" Style="{StaticResource CenterButton}" Text="start riding" />
                   </StackLayout>
                 
                 <StackLayout Grid.Column="2">

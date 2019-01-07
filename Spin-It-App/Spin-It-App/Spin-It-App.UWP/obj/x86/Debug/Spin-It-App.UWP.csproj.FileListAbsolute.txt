@@ -8,6 +8,7 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Core\Spin-It-App.UWP.exe
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Spin-It-App.UWP.build.appxrecipe
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microcharts.Forms.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -172,6 +173,12 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\WindowsBase.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\mscorlib.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\netstandard.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\libEGL.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\libGLESv2.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\libSkiaSharp.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\SkiaSharp.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Xamarin.Forms.Core.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Xamarin.Forms.Platform.dll
@@ -298,3 +305,5 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microcharts.Uwp.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microcharts.dll
