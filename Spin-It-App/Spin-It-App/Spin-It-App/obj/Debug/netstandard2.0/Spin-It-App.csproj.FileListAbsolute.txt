@@ -11,3 +11,4 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App\obj\Debug\ne
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App\obj\Debug\netstandard2.0\Spin-It-App.pdb
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App\obj\Debug\netstandard2.0\Spin-It-App.csprojAssemblyReference.cache
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App\obj\Debug\netstandard2.0\list.xaml.g.cs

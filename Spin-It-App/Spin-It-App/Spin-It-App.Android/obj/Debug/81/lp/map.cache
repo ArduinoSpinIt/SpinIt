@@ -2,6 +2,7 @@ FormsViewGroup
 Microcharts
 Microcharts.Droid
 Microcharts.Forms
+Newtonsoft.Json
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms

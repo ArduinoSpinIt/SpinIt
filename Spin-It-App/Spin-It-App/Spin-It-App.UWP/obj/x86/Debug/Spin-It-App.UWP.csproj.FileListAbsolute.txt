@@ -307,3 +307,5 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microcharts.Uwp.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Microcharts.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.UWP\bin\x86\Debug\Newtonsoft.Json.pdb

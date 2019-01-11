@@ -6,6 +6,7 @@ C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\Microcharts.Forms.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\SkiaSharp.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\SkiaSharp.Views.Android.dll
 C:\Users\talhe\Desktop\technion\Spin-It-App\Spin-It-App\Spin-It-App.Android\obj\Debug\81\android\assets\SkiaSharp.Views.Forms.dll
