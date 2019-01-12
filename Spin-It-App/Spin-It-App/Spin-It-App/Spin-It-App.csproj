@@ -16,6 +16,7 @@
     <None Remove="header2.png" />
     <None Remove="header_allrides.png" />
     <None Remove="header_stats.png" />
+    <None Remove="logo_big.png" />
     <None Remove="logo_small.png" />
     <None Remove="logo_small_W.png" />
     <None Remove="wheel_small.png" />
@@ -28,6 +29,7 @@
     <Content Include="header2.png" />
     <Content Include="header_allrides.png" />
     <Content Include="header_stats.png" />
+    <Content Include="logo_big.png" />
     <Content Include="logo_small.png" />
     <Content Include="wheel_small.png" />
   </ItemGroup>
@@ -41,6 +43,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="list.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Startpage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Statistics.xaml">

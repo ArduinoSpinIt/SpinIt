@@ -11,7 +11,7 @@ namespace Spin_It_App
         {
             InitializeComponent();
 
-            MainPage = new Statistics();//new MainPage();
+            MainPage = new Startpage();
         }
 
         protected override void OnStart()

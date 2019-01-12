@@ -2914,7 +2914,10 @@ namespace Spin_It_App.Droid
 			public const int ic_vol_type_tv_light = 2131296516;
 			
 			// aapt resource value: 0x7F010008
-			public const int logo_small = 2130771976;
+			public const int logo_big = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int logo_small = 2130771977;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -3021,8 +3024,8 @@ namespace Spin_It_App.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010009
-			public const int wheel_small = 2130771977;
+			// aapt resource value: 0x7F010010
+			public const int wheel_small = 2130771984;
 			
 			static Drawable()
 			{
