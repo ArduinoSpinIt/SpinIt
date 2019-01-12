@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpinItApp.MyRidesPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="{StaticResource lightGray}" Orientation="Horizontal" >
+                <Image Source="logo_small.png" Margin="10,0,0,00" HeightRequest="35" HorizontalOptions="Start"/>
+                <Button Style="{StaticResource SmallButton}"  x:Name="backToSpinning" Text="Back" Clicked="OnBackToSpinningClicked"  HorizontalOptions="Start" Margin="5,5,5,5" />
+            </StackLayout>
+            <Image Source="header_allrides.png" Aspect="AspectFit" Margin="0,15,0,00"/>
+            <!-- the none data string-->
+            <StackLayout  x:Name="entrynone" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,50">
+                <Label Text="There are no past rides ... " Style="{StaticResource StatsCaptionLabel}" Margin="10"/>
+                <Label Text="You better start spinning!" Style="{StaticResource MidLabel}" Margin="10" />
+            </StackLayout>
+            
+            <ScrollView x:Name="scroll" >
+                <StackLayout>
+                    <ListView  x:Name="listView" SeparatorVisibility="Default" SeparatorColor="Black" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical" Padding="2" Margin="0,5,0,5" VerticalOptions="Center">
+                                        <StackLayout Orientation="Horizontal"  Padding="2" Margin="0,5,0,5">
+                                            <Image Source="{Binding image}" VerticalOptions="Center"/>
+                                            <Label Text="{Binding date}" Style="{StaticResource StatsNumberLabel}"   VerticalOptions="Center"/>
+                                            <Label Text="{Binding time}" Style="{StaticResource StatsNumberLabel}"   VerticalOptions="Center"/>
+                                            <Label Text="{Binding distance}" Style="{StaticResource StatsNumberLabel}"   VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
+

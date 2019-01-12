@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="SpinItApp.StatisticsPage">
+
+
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout BackgroundColor="{StaticResource lightGray}" Orientation="Horizontal" >
+                <Image Source="logo_small.png" Margin="10,0,0,00" HeightRequest="35" HorizontalOptions="Start"/>
+                <Button Style="{StaticResource SmallButton}" Text="back"  HorizontalOptions="Start" Margin="5,5,5,5" x:Name="backToSpinning" Clicked="OnBackToSpinningClicked"/>
+            </StackLayout>
+            <Image Source="header_stats.png"   Margin="0,3,0,00"/>
+            <StackLayout  x:Name="entrynone" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,50">
+                <Label Text="There are no statistics yet... " Style="{StaticResource StatsCaptionLabel}" Margin="10"/>
+                <Label Text="You better start spinning!" Style="{StaticResource MidLabel}" Margin="10" />
+            </StackLayout>
+            <StackLayout x:Name="graphs" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" >
+                    <Label Text="Distance by Date" HorizontalOptions="Center"/>
+                    <Frame x:Name="frame1" Padding="0"  BorderColor="AliceBlue"  HasShadow="True" Margin="5">
+                        <forms:ChartView x:Name="chartView" WidthRequest="300" HeightRequest="195" BackgroundColor="Transparent" HorizontalOptions="Center"  VerticalOptions="Center" Margin="10" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Time by Date" HorizontalOptions="Center"/>
+                    <Frame x:Name="frame2" Padding="0" BorderColor="AliceBlue" HasShadow="True" Margin="5">
+                        <forms:ChartView x:Name="chartView2" WidthRequest="300" HeightRequest="195" BackgroundColor="Transparent" HorizontalOptions="Center"  VerticalOptions="Center" Margin="10"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout HeightRequest="55">
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
