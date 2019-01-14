@@ -46,8 +46,8 @@
                 </StackLayout>
 
                 <StackLayout Grid.Column="2">
-                    <Label Style="{StaticResource StatsNumberLabel}" Text="0" />
-                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Speed (KM/H)" x:Name="speedLabel" />
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="0" x:Name="speedLabel"/>
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Speed (KM/H)"  />
                 </StackLayout>
             </Grid>
 

@@ -309,7 +309,7 @@ namespace SpinItApp
                 changeRiderButton.IsVisible = true;
 
                 // pop up an alert for the score acheived
-                var StringAlert = "You cycled for " + currDistance + " in " + currTime;
+                var StringAlert = "You cycled for " + currDistance + " meters in " + currTime;
                 DisplayAlert("Well Done!", StringAlert, "OK");
             }
         }
