@@ -23,7 +23,8 @@ namespace SpinItApp
 
                 foreach (CloudConnection.JsonItem item in itemslist)
                 {
-                    CellViewModel cell = new CellViewModel { date = item.Date, time = item.Time, distance = item.Distance + " M" };
+                    string newDate = cloud.getDate(item);
+                    CellViewModel cell = new CellViewModel { date = newDate, time = item.Time, distance = item.Distance + " M" };
 
                     cellList.Add(cell);
                 }

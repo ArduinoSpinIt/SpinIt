@@ -13,6 +13,15 @@ namespace SpinItApp
         private readonly string Getallscores = "https://spinitphone.azurewebsites.net/api/getalluserscores?code=istA1ulaOfmfB0tg9cogPl4sqRbQc4cKCVS4FUQt29LG42SeqmASPg==";
         private readonly string Getxscores = "https://spinitphone.azurewebsites.net/api/getUserScoresByAmount?code=3kFNARoWkv30BWbJY5iBqiRSoW9/OJpCghdsZ/1hy7cbxFO3lL4tcg==";
 
+        public string getDate(JsonItem item)
+        {
+            string date = item.Date.Split('T')[0];
+            string[] dateVals = date.Split('-');
+            return dateVals[2] + "." + dateVals[1] + "." + dateVals[0][2] + dateVals[0][3];
+        }
+
+
+
         public void AddScore(string name,string time, string date ,string distance )
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(Addscore);

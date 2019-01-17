@@ -57,9 +57,11 @@ namespace SpinItApp
                 foreach (CloudConnection.JsonItem item in scores)
                 {
                     int numVal = Int32.Parse(item.Distance);
+
+                    string newDate = Cloud.getDate(item);
                     Microcharts.Entry ent = new Microcharts.Entry(numVal)
                     {
-                        Label = item.Date,
+                        Label = newDate,
                         ValueLabel = numVal + " M",
                         Color = SKColor.Parse("#3498db")
                     };
@@ -68,7 +70,7 @@ namespace SpinItApp
                     string currtime = item.Time;
                     Microcharts.Entry ent2 = new Microcharts.Entry(FromStringToIntTime(currtime))
                     {
-                        Label = item.Date,
+                        Label = newDate,
                         ValueLabel = FromStringToIntTime(currtime).ToString() + " min",
                         Color = SKColor.Parse("#3498db")
 

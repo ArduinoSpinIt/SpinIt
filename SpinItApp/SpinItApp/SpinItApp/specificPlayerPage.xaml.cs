@@ -258,11 +258,11 @@ namespace SpinItApp
             if (timerRunning == false)
             {
                 //start riding was clicked
-               
-                if (!isBTConnected)
-                {
-                    connectToBT();
-                }
+
+                   if (!isBTConnected) //TODO- enable commented things
+                   {
+                       connectToBT();
+                   }
                 currDistance = "0";
                 currSpeed = "0";
                 speedLabel.Text = currSpeed;
@@ -275,8 +275,8 @@ namespace SpinItApp
                 statButton.IsVisible = false;
                 myRidesButton.IsVisible = false;
                 changeRiderButton.IsVisible = false;
-                
-                if (isBTConnected)
+
+                if (isBTConnected)  //TODO- enable commented things
                 {
                     //starts the bluetooth thread
                     Task.Run(() => { bluetoothManager(); });
@@ -299,7 +299,9 @@ namespace SpinItApp
                 //stop riding was clicked
 
                 //upload score to cloud
-                string date = DateTime.Now.ToString("d/M/yyyy");
+
+                string date = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");  
+
                 cloud.AddScore(playerName, currTime, date, currDistance);              
                 askToQuit = true;
                 timerRunning = false;
