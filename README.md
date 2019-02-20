@@ -1,7 +1,7 @@
 ![logospinit](./pics/logo_big.png)
 
 
-A Project in Internet of Things (IoT) SSDL Lab, Computer Science Technion.
+**A Project in Internet of Things (IoT) SSDL Lab, Computer Science Technion**
 
 
 SpinIt is a bicycle racing game, controlled by physical bikes which are connected to an exercise device. The game allows it's players to do a spinning workout while they are playing. There is also a standalone app, which provides the player details about his cycling performance.
