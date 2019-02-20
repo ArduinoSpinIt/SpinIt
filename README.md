@@ -22,4 +22,8 @@ The Spin-It app on the phone/tablet provides the user with his riding time, curr
 
 
 
-      
+**This repository containes:**
+
+* Cloud connection module code for the computer game in UNITY [here](./CloudConnectionUnity/Assets)
+* The SpinIt mobile App [here](./SpinItApp)
+* The arduino code [here]() #TODO ADD HERE
