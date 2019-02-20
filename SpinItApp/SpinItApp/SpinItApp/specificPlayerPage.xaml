@@ -28,7 +28,7 @@
                 <Label Style="{StaticResource ProfileNameLabel}" Text="" Margin="0,13,0,00" x:Name="playerNameLabel"/>
             </StackLayout>
 
-            <Grid Grid.Row="3" Margin="0,10" ColumnSpacing="0" RowSpacing="0">
+            <Grid x:Name="grid" Grid.Row="3" Margin="0,10" ColumnSpacing="0" RowSpacing="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />

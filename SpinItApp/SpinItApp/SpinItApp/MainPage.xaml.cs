@@ -34,10 +34,10 @@ namespace SpinItApp
                 if (this.width > this.height) // landscape mode
                 {
 
-                    this.logo.Margin = new Thickness(5);
-                    this.picker.Margin = new Thickness(5, 0, 5, 0);
+                    this.logo.Margin = new Thickness(4);
+                    this.picker.Margin = new Thickness(3, 0, 3, 0);
                     this.nameEntry.Margin = new Thickness(5);
-                    this.doneButton.Margin = new Thickness(5);
+                    this.doneButton.Margin = new Thickness(3);
                     this.BackgroundImage = "backkk.png";
 
 

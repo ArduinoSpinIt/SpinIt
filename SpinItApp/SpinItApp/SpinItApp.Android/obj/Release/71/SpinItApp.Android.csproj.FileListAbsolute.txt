@@ -1,0 +1,4 @@
+C:\Users\talhe\Desktop\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Release\71\MonoAndroid,Version=v7.1.AssemblyAttributes.cs
+C:\Users\talhe\Desktop\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Release\71\SpinItApp.Android.csprojAssemblyReference.cache
+C:\Users\talhe\Desktop\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Release\71\libraryimports.cache.stamp
+C:\Users\talhe\Desktop\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Release\71\res.flag

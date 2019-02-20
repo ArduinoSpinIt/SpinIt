@@ -102,8 +102,6 @@ C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj
 C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\res\drawable\backkk.png
 C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\res\drawable\header2.png
 C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\res\drawable\logo_small.png
-C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\bin\Debug\SpinItApp.Android.dll
-C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\linksrc\SpinItApp.pdb
-C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\linksrc\SpinItApp.Android.dll.mdb
-C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
-C:\Users\user\Desktop\technion\arduino\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\user\Desktop\technion\arduino\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\SpinItApp.Android.csprojAssemblyReference.cache
+C:\Users\user\Desktop\technion\arduino\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\SpinItApp.Android.dll
+C:\Users\user\Desktop\technion\arduino\finalApp\SpinItApp\SpinItApp\SpinItApp.Android\obj\Debug\SpinItApp.Android.pdb

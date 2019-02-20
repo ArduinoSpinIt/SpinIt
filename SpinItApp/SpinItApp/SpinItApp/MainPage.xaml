@@ -9,8 +9,8 @@
             <Image x:Name="logo" Source="logo_big.png" HeightRequest="144" WidthRequest="355" MinimumWidthRequest="355" MinimumHeightRequest="144" Margin="20"/>
             <StackLayout x:Name="itemslayer" Orientation="Vertical">
                 <StackLayout x:Name="inputlayer" Orientation="Vertical">
-                    <Picker x:Name="picker" Title="Please Select Player:" VerticalOptions="Center" HorizontalOptions="Center" Margin="10"  WidthRequest="300"/>
-                    <Entry x:Name="nameEntry" Placeholder="Please Enter Your Name" MaxLength="20" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" WidthRequest="300"/>
+                    <Picker x:Name="picker" Title="Please Select Player:" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small" Margin="10"  WidthRequest="300"/>
+                    <Entry x:Name="nameEntry" Placeholder="Please Enter Your Name" MaxLength="20" Text="" VerticalOptions="Center" HorizontalOptions="Center"  FontSize="Small" Margin="10" WidthRequest="300"/>
                 </StackLayout>
                 <StackLayout>
                     <Button x:Name="doneButton" Text="Done" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource CenterButton}" Margin="20" Clicked="onDoneButtonClicked" />

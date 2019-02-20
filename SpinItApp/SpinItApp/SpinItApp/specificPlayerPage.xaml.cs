@@ -258,11 +258,11 @@ namespace SpinItApp
             if (timerRunning == false)
             {
                 //start riding was clicked
-
-                   if (!isBTConnected) //TODO- enable commented things
-                   {
-                       connectToBT();
-                   }
+               
+                if (!isBTConnected)
+                {
+                    connectToBT();
+                }
                 currDistance = "0";
                 currSpeed = "0";
                 speedLabel.Text = currSpeed;
@@ -275,8 +275,8 @@ namespace SpinItApp
                 statButton.IsVisible = false;
                 myRidesButton.IsVisible = false;
                 changeRiderButton.IsVisible = false;
-
-                if (isBTConnected)  //TODO- enable commented things
+                  
+                if (isBTConnected)
                 {
                     //starts the bluetooth thread
                     Task.Run(() => { bluetoothManager(); });
@@ -291,7 +291,7 @@ namespace SpinItApp
                     statButton.IsVisible = true;
                     myRidesButton.IsVisible = true;
                     changeRiderButton.IsVisible = true;
-                }
+                } 
             }
 
             else if (timerRunning == true)
@@ -299,9 +299,7 @@ namespace SpinItApp
                 //stop riding was clicked
 
                 //upload score to cloud
-
-                string date = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");  
-
+                string date = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                 cloud.AddScore(playerName, currTime, date, currDistance);              
                 askToQuit = true;
                 timerRunning = false;
@@ -351,14 +349,20 @@ namespace SpinItApp
                 {
                     this.BackgroundImage = "backkk.png";
                     this.buttonslayer.Orientation = StackOrientation.Horizontal;
+                    this.playerNameLabel.Margin = new Thickness(0, 10, 0, 0);
+                    this.grid.Margin = new Thickness(0, 3);
+
+
 
 
 
                 }
                 else //portrait mode
                 {
+                    this.playerNameLabel.Margin = new Thickness(0, 13, 0, 0);
                     this.BackgroundImage = "backk_port.png";
                     this.buttonslayer.Orientation = StackOrientation.Vertical;
+                    this.grid.Margin = new Thickness(0, 10);
                 }
             }
         }

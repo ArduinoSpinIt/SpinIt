@@ -982,11 +982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\talhe\\Desktop\\SpinItApp\\SpinItApp\\SpinItApp.Android\\SpinItApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.Android\\SpinItApp.Android.csproj",
       "projectName": "SpinItApp.Android",
-      "projectPath": "C:\\Users\\talhe\\Desktop\\SpinItApp\\SpinItApp\\SpinItApp.Android\\SpinItApp.Android.csproj",
+      "projectPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.Android\\SpinItApp.Android.csproj",
       "packagesPath": "C:\\Users\\talhe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\talhe\\Desktop\\SpinItApp\\SpinItApp\\SpinItApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1003,8 +1003,8 @@
       "frameworks": {
         "monoandroid71": {
           "projectReferences": {
-            "C:\\Users\\talhe\\Desktop\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj": {
-              "projectPath": "C:\\Users\\talhe\\Desktop\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj"
+            "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj": {
+              "projectPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj"
             }
           }
         }
