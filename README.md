@@ -14,7 +14,7 @@ The Spin-It app on the phone/tablet provides the user with his riding time, curr
 ![1](./pics/land.jpg)
 ![8](./pics/port.jpg)
 
-[Time and distance count moving screen](./pics/moving_screen.mp4)
+click [here](./pics/moving_screen.mp4) for Time and distance count moving screen
 
 ![ardo](./pics/arduino.jpg)
 
@@ -23,4 +23,5 @@ The Spin-It app on the phone/tablet provides the user with his riding time, curr
 
 * Cloud connection module code for the computer game in UNITY [here](./CloudConnectionUnity/Assets)
 * The SpinIt mobile App [here](./SpinItApp)
-* The arduino code [here]() #TODO ADD HERE
+* The arduino code [here](./arduino) 
+
