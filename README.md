@@ -11,15 +11,12 @@ SpinIt is a bicycle racing game, controlled by physical bikes which are connecte
 
 The Spin-It app on the phone/tablet provides the user with his riding time, current speed, the distance he has passed, and shows him some statistics regarding his riding history. 
 
-![1](./pics/1.jpg)
-![8](./pics/8.png)
-![6](./pics/6.png)
-![3](./pics/3.png)
-![5](./pics/5.png)
-![4](./pics/4.png)
-![2](./pics/2.jpg)
-![7](./pics/7.png)
+![1](./pics/land.jpg)
+![8](./pics/port.png)
 
+[Time and distance count moving screen](./pics/moving_screen.mp4)
+
+![ardo](./pics/arduino.jpg)
 
 
 **This repository containes:**
