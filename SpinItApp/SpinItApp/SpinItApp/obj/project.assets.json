@@ -611,11 +611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj",
+      "projectUniqueName": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj",
       "projectName": "SpinItApp",
-      "projectPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj",
+      "projectPath": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj",
       "packagesPath": "C:\\Users\\talhe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\obj\\",
+      "outputPath": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

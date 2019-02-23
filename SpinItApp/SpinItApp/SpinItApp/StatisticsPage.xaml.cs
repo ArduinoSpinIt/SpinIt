@@ -8,6 +8,8 @@ using Microcharts;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+/*this is the statistics page that shows 2 graphs - one of distance by date, and the other time by date*/
 namespace SpinItApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -96,6 +98,7 @@ namespace SpinItApp
         private double width = 0;
         private double height = 0;
 
+        /*this method is called when the screen rotates and it initializes the screen properties by mode*/
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height); //must be called

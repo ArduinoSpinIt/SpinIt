@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
+
+/*this class represent a line of the "rides" list*/
 namespace SpinItApp
 {
    public class CustomCell : ViewCell

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+/*this is main screen for each player - shows the time,distance and speed of the current ride .
+from this screen we can move to the statistics page, the rides list page, and to start and stop a current ride*/
+
 namespace SpinItApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]

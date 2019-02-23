@@ -4,6 +4,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 
+/*this class is the connection api to the cloud*/
 
 namespace SpinItApp
 {
@@ -13,6 +14,7 @@ namespace SpinItApp
         private readonly string Getallscores = "https://spinitphone.azurewebsites.net/api/getalluserscores?code=istA1ulaOfmfB0tg9cogPl4sqRbQc4cKCVS4FUQt29LG42SeqmASPg==";
         private readonly string Getxscores = "https://spinitphone.azurewebsites.net/api/getUserScoresByAmount?code=3kFNARoWkv30BWbJY5iBqiRSoW9/OJpCghdsZ/1hy7cbxFO3lL4tcg==";
 
+        /*extracts the name out of a json string*/
         public string getDate(JsonItem item)
         {
             string date = item.Date.Split('T')[0];
@@ -21,7 +23,7 @@ namespace SpinItApp
         }
 
 
-
+        /*add a user score to the cloud*/
         public void AddScore(string name,string time, string date ,string distance )
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(Addscore);
@@ -48,7 +50,7 @@ namespace SpinItApp
             }
         }
 
-
+        /*returns all the scores of a specific name */
         public List<JsonItem> GetAllScores(string name)
         {
 
@@ -77,7 +79,7 @@ namespace SpinItApp
             }
         }
 
-
+        /*returns a specific number (amount) of scores of a specific name*/
         public List<JsonItem> GetXScores(string name, int amount )
         {
 
@@ -108,6 +110,7 @@ namespace SpinItApp
             }
         }
 
+        /*a container class for the json item - it is used to deserialize json object*/
         public class JsonWrap
         {
             [JsonProperty("m_MaxCapacity")]
@@ -124,6 +127,7 @@ namespace SpinItApp
 
         }
 
+        /*the json item class that containes the fields of the json from the cloud*/
         public class JsonItem
         {
             [JsonProperty("name")]

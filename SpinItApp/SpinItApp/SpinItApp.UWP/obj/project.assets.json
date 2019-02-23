@@ -8006,11 +8006,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\SpinItApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\SpinItApp.UWP.csproj",
       "projectName": "SpinItApp.UWP",
-      "projectPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\SpinItApp.UWP.csproj",
+      "projectPath": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\SpinItApp.UWP.csproj",
       "packagesPath": "C:\\Users\\talhe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\obj\\",
+      "outputPath": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8030,8 +8030,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj": {
-              "projectPath": "C:\\Users\\talhe\\Desktop\\finalApp\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj"
+            "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj": {
+              "projectPath": "C:\\Users\\talhe\\Documents\\GitHub\\SpinIt\\SpinItApp\\SpinItApp\\SpinItApp\\SpinItApp.csproj"
             }
           }
         }

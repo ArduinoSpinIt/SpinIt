@@ -5,10 +5,13 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+/*this is the entrance screen - where we need to pick a player ,one of 2 (for the right bluetooth connection),
+and a user name*/
 namespace SpinItApp
 {
 	public partial class MainPage : ContentPage
 	{
+        /*the picker list*/
         List<string> Players = new List<string> { "player1", "player2" };
 
         public MainPage()
@@ -23,6 +26,7 @@ namespace SpinItApp
         private double width = 0;
         private double height = 0;
 
+        /*this method is called upon a screen rotation - and it initializes the right properties for each mode */
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height); //must be called
@@ -56,6 +60,7 @@ namespace SpinItApp
             }
         }
 
+        /*invoked when done button is clicked*/
         private async void onDoneButtonClicked(object sender, EventArgs e)
         {
             if (picker.SelectedIndex == -1 && nameEntry.Text == "")

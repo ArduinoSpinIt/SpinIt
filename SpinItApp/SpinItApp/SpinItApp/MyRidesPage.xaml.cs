@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+/*this screen shows the previous rides list of a current user*/
 namespace SpinItApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -69,6 +71,7 @@ namespace SpinItApp
         }
     }
 
+    /*a class for the lines content*/
     public class CellViewModel
     {
         public string date { get; set; }
