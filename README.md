@@ -13,6 +13,7 @@ Repository contant:
 * The SpinIt mobile App [here](./SpinItApp)
 * The arduino code [here](./arduino)
 * Link for the unity game [here]() #todo add link
+* Unity game documentation [here](./Unity%20doc)
 
 
 ---
