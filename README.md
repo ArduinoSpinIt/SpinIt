@@ -23,5 +23,6 @@ click [here](./pics/moving_screen.mp4) for Time and distance count moving screen
 
 * Cloud connection module code for the computer game in UNITY [here](./CloudConnectionUnity/Assets)
 * The SpinIt mobile App [here](./SpinItApp)
-* The arduino code [here](./arduino) 
+* The arduino code [here](./arduino)
+* Link for the unity game [here]() #todo add link
 
