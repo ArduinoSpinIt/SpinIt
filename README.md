@@ -11,11 +11,11 @@ SpinIt is a bicycle racing game, controlled by physical bikes which are connecte
 
 The Spin-It app on the phone/tablet provides the user with his riding time, current speed, the distance he has passed, and shows him some statistics regarding his riding history. 
 
-Landscape App Screens
+Landscape App Screens (main screens)
 --
 ![1](./pics/land.jpg)
 
-Portrait App Screens
+Portrait App Screens (main screens and popups)
 --
 ![8](./pics/port.jpg)
 
