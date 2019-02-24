@@ -12,7 +12,7 @@ Repository contant:
 * Cloud connection module code for the computer game in UNITY [here](./CloudConnectionUnity/Assets)
 * The SpinIt mobile App [here](./SpinItApp)
 * The arduino code [here](./arduino)
-* Link for the unity game [here]() #todo add link
+* Link for the unity game [here](https://drive.google.com/open?id=1NPzkJZHltsLtDUaqrKO7GxfUeXol-TYS)
 * Unity game documentation [here](./Unity%20doc)
 
 
